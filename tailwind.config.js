@@ -25,7 +25,7 @@ module.exports = withMT({
                 secondary: "#F5E6E0",
             },
             backgroundImage: {
-                hero: "url('./src/assets/blue-shopping-bag.jpg')",
+                hero: "url('/e-Commerce-React/assets/blue-shopping-bag.jpg')",
             },
         },
     },

@@ -17,12 +17,15 @@ const App = () => {
                 <Router>
                     <Header />
                     <Routes>
-                        <Route path="/" element={<Home />} />
+                        <Route path="/e-Commerce-React/" element={<Home />} />
                         <Route
-                            path="/product/:id"
+                            path="/e-Commerce-React/product/:id"
                             element={<SingleProduct />}
                         />
-                        <Route path="*" element={<Navigate to={"/"} />} />
+                        <Route
+                            path="*"
+                            element={<Navigate to={"/e-Commerce-React/"} />}
+                        />
                     </Routes>
                     <Sidebar />
                     <Footer />
