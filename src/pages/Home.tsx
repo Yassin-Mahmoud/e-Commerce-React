@@ -1,4 +1,4 @@
-import { ProductContext } from "../contexts/ProductContext";
+import { ProductContext, ProductData } from "../contexts/ProductContext";
 import Product from "../components/Product";
 import Hero from "../components/Hero";
 
