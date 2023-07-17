@@ -6,10 +6,15 @@ import CartItem from "./CartItem";
 import { SidebarContext } from "../contexts/SIdebarContext";
 import { CartContext } from "../contexts/CartContext";
 import { Link } from "react-router-dom";
+import StripeCheckout from "react-stripe-checkout";
 
 const Sidebar = () => {
     const { isOpen, handleCloseOpen } = SidebarContext();
     const { cart, clearCart, total, cartCounter } = CartContext();
+
+    const onToken = (token: any) => {
+        console.log(token);
+    };
 
     return (
         <>
@@ -61,12 +66,15 @@ const Sidebar = () => {
                     >
                         View Cart
                     </Link>
-                    <Link
-                        to={""}
-                        className="bg-primary text-white flex p-4 justify-center items-center text-primary w-full font-medium"
+                    {/* <div
+                        className="bg-primary cursor-pointer text-white flex p-4 justify-center items-center w-full font-medium"
                     >
                         Checkout
-                    </Link>
+                    </div> */}
+                    <StripeCheckout
+                        token={onToken}
+                        stripeKey="pk_test_51NUuBhLiTRYiOBYWF4PNi3V0fC0zl5XbGAkH4uZoFhTTDcKSXlXrjebOE8sKuR8ddM0xel1NLZ15fcJdnCYOGl5700rCAhe2vQ"
+                    />
                 </div>
             </div>
         </>

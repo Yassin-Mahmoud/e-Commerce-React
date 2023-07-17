@@ -58,10 +58,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                             </Typography>
                             {truncateString(product.title, 30)}
                         </Typography>
-                        <Typography
-                            color="blue-gray"
-                            className="font-medium font-semibold"
-                        >
+                        <Typography color="blue-gray" className="font-semibold">
                             ${parseFloat(product.price.toString()).toFixed(2)}
                         </Typography>
                     </div>

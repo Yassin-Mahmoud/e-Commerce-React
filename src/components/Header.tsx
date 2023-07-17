@@ -24,7 +24,7 @@ const Header = () => {
             <header
                 className={`${
                     isActive ? "bg-white py-4 shadow-md " : "bg-none py-6"
-                } fixed w-full z-10 transition-all`}
+                } fixed w-full h-[70px] z-10 transition-all`}
             >
                 <div className="container flex mx-auto items-center justify-between h-full">
                     <Link to={"/"}>
@@ -33,9 +33,7 @@ const Header = () => {
                         </div>
                     </Link>
                     <div
-                        onClick={() => {
-                            handleCloseOpen();
-                        }}
+                        onClick={() => handleCloseOpen()}
                         className="cursor-pointer flex relative mr-4"
                     >
                         <Badge className="text-xs" content={cartCounter}>
